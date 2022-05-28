@@ -22,6 +22,11 @@ app.get('/pokemon/new', (req, res) => {
 
 
 //CREATE==============================================
+app.post('/pokemon', (req, res) => {
+    pokemon.push(req.body);
+    console.log(req.body);
+    res.redirect('/pokemon')
+})
 
 //SHOW================================================
 app.get('/pokemon/:id', (req, res) => {
@@ -29,14 +34,7 @@ app.get('/pokemon/:id', (req, res) => {
 })
 
 
-
-
-
-
 //EDIT================================================
-
-
-
 //UPDATE===============================================
 
 //DESTROY==============================================
