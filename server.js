@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 
 //Index=============================================
 app.get('/pokemon', (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {pokemon});
 })
 
 app.listen(port, () => {

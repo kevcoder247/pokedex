@@ -10,6 +10,10 @@
     <title>Index EJS</title>
 </head>
 <body>
-    <h1>INDEX EJS</h1>
+    <% for(let i = 0; i < pokemon.length; i++){ %>
+        <h3>NAME:  <%= pokemon[i].name; %></h3>
+        <img src=<%= pokemon[i].img  %>>
+        <h5>TYPE: <%= pokemon[i].type%></h5>
+  <%  } %>
 </body>
 </html>
