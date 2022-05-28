@@ -1,4 +1,5 @@
 const express = require('express');
+const pokemon = require('./models/pokemon');
 const app = express();
 const port = 3000;
 
@@ -9,8 +10,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: false }));
 
 //Index=============================================
-app.get('/', (req, res) => {
-    res.send('ROOT CONNECTED');
+app.get('/pokemon', (req, res) => {
+    res.render('index.ejs');
 })
 
 app.listen(port, () => {
