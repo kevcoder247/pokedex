@@ -7,15 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <link rel="stylesheet" href="/css/main.css">
-    <title>Index EJS</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="container">
-        <% for(let i = 0; i < pokemon.length; i++){ %>
-            <h3>NAME:  <%= pokemon[i].name; %></h3>
-            <!-- create a show page for each pokemon with entire object displayed -->
-            <a href="/pokemon/<%=i%>"> <img src=<%= pokemon[i].img  %>></a>
-      <%  } %>
+        <h1>POKEMON SHOW PAGE</h1>
+        <button><a href="/pokemon">HOME</a></button>
     </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 const express = require('express');
-const pokemon = require('./models/pokemon');
+const pokemon = require('./models/pokemon.js');
 const app = express();
 const port = 3000;
 
@@ -14,6 +14,36 @@ app.get('/pokemon', (req, res) => {
     res.render('index.ejs', {pokemon});
 })
 
+//SHOW================================================
+app.get('/pokemon/:id', (req, res) => {
+    res.render('show.ejs', {pokemon: pokemon[req.params.id]} )
+})
+
+
+
+
+//NEW=================================================
+
+//EDIT================================================
+
+//CREATE==============================================
+
+//UPDATE===============================================
+
+//DESTROY==============================================
+
+
+
+
+
+
+
+
+
+
+
+
+//CHECK IF APP IS LISTENING===========================
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
 });

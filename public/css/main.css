@@ -1,3 +1,14 @@
 body{
     background-color: rgb(199, 195, 195);
 }
+div button{
+    color: white;
+    border: 2px solid red;
+    font-size: 2rem;
+    background-color: blue;
+    
+}
+
+div button a{
+    text-decoration: none;
+}
