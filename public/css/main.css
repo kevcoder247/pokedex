@@ -1,12 +1,37 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(93, 203, 228);
+}
+header{
+    text-align: center;
+}
+.container{
+    background-color: rgb(79, 243, 34);
+    text-align: center;
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    border: 3px solid rgb(43, 0, 255);
+    margin: 5px 5px;
+    width: 414px;
+    height: 385px;
+}
+img{
+    width: 200px;
+}
+.cardText{
+    border: 2px solid red;
+    margin: auto;
+    width: 300px;
 }
 div button{
     color: white;
     border: 2px solid red;
     font-size: 2rem;
     background-color: blue;
-    
 }
 
 div button a{

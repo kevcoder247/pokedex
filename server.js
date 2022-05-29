@@ -39,9 +39,6 @@ app.get('/pokemon/:id/edit', (req, res) => {
     )
 })
 
-
-
-
 //CREATE==============================================
 app.post('/pokemon', (req, res) => {
     pokemon.push(req.body);
@@ -56,9 +53,10 @@ app.get('/pokemon/:id', (req, res) => {
 
 
 //EDIT================================================
-
-
-
+app.put('/pokemon/:id', (req, res) => {
+    pokemon[req.params.id] = req.body
+    res.redirect('/pokemon')
+})
 
 
 //CHECK IF APP IS LISTENING===========================
