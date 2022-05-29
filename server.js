@@ -28,6 +28,19 @@ app.delete('/pokemon/:id', (req, res) => {
     res.redirect('/pokemon')
 })
 
+//UPDATE===============================================
+app.get('/pokemon/:id/edit', (req, res) => {
+    res.render(
+        "edit.ejs", 
+        {
+          pokemon: pokemon[req.params.id],
+          index: req.params.id  
+        }
+    )
+})
+
+
+
 
 //CREATE==============================================
 app.post('/pokemon', (req, res) => {
@@ -43,7 +56,7 @@ app.get('/pokemon/:id', (req, res) => {
 
 
 //EDIT================================================
-//UPDATE===============================================
+
 
 
 
