@@ -1,4 +1,5 @@
 const express = require('express');
+const methodOverride = require("method-override")
 const pokemon = require('./models/pokemon.js');
 const app = express();
 const port = 3000;
@@ -8,6 +9,8 @@ app.use(express.static(__dirname + '/public'));
 
 //MIDDLEWARE=======================================
 app.use(express.urlencoded({ extended: false }));
+//Allows delete button to works
+app.use(methodOverride("_method"))
 
 //Index=============================================
 app.get('/pokemon', (req, res) => {
