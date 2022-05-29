@@ -19,6 +19,11 @@ app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs');
 })
 
+//DESTROY==============================================
+app.delete('/pokemon/:id', (req, res) => {
+    pokemon.splice(req.params.id, 1)
+    res.redirect('/pokemon')
+})
 
 
 //CREATE==============================================
@@ -36,16 +41,6 @@ app.get('/pokemon/:id', (req, res) => {
 
 //EDIT================================================
 //UPDATE===============================================
-
-//DESTROY==============================================
-
-
-
-
-
-
-
-
 
 
 
