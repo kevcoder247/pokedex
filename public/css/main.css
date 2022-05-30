@@ -1,39 +1,53 @@
 body{
-    background-color: rgb(93, 203, 228);
+    /* background-color: rgb(93, 203, 228); */
 }
 header{
+    font-size: 2rem;
     text-align: center;
 }
 .container{
-    background-color: rgb(79, 243, 34);
+    /* background-color: rgb(79, 243, 34); */
     text-align: center;
-    border: 3px solid red;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .card{
-    border: 3px solid rgb(43, 0, 255);
-    margin: 5px 5px;
+     margin: 5px 5px;
     width: 414px;
-    height: 385px;
+    height: 400px;    
+}
+div .card a{
+    text-decoration: none;
 }
 img{
     width: 200px;
+    padding-top: 60px;
 }
 .cardText{
-    border: 2px solid red;
+    
     margin: auto;
     width: 300px;
 }
 div button{
-    color: white;
-    border: 2px solid red;
-    font-size: 2rem;
-    background-color: blue;
+    /* border: 2px solid red; */
+    font-size: 1.2rem;
+    width: 100px;
 }
 
 div button a{
     text-decoration: none;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.deleteInput{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   border: none;
 }

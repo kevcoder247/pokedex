@@ -10,14 +10,14 @@
     <h1>EDIT POKEMON</h1>
     
     <form action="/pokemon/<%=index%>?_method=PUT" method="POST">
-        <img src="http://img.pokemondb.net/artwork/bulbasaur.jpg">
+        <img src=`http://img.pokemondb.net/artwork/${pokemon}.img`>
         <input type="text" name="name" value="<%=pokemon.name%>" placeholder="Name">
         <input type="text" name="type" value="<%=pokemon.type%>" placeholder="type">
         <input type="text" name="stats" value="<%=pokemon.stats.hp%>" placeholder="type">
         <input type="text" name="stats" value="<%=pokemon.stats.attack%>" placeholder="type">
         <input type="text" name="stats" value="<%=pokemon.stats.defense%>" placeholder="type"><br>
 
-        <input type="submit" value="Submit Changes">
+        <input type="submit" name="" value="Submit Changes">
     </form>
 </body>
 </html>

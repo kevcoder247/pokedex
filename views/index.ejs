@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <%- include('./partials/head.ejs')%>
+    <script src="https://kit.fontawesome.com/c755409422.js" crossorigin="anonymous">
+        alert('hello')
+    </script>
 </head>
 <body>
     <header>
@@ -20,15 +23,19 @@
             <a href="/pokemon/<%=i%>"> <img src=<%= pokemon[i].img  %>></a>
             
             <div class="cardText">
-                <h3>NAME:  <%= pokemon[i].name; %></h3>
+
+                <a href="/pokemon/<%=i%>"><h3><%= pokemon[i].name; %></h3></a>
+                
+                <div class="buttons">
+                    <!-- Delete button -->
+                    <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
+                        
+                        <button class="buttonSize"><input type="submit" value="DELETE" class="deleteInput"></button>
+                    </form>
             
-                <!-- Delete button -->
-                <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
-                    <input type="submit" value="DELETE">
-                </form>
-            
-                <!-- edit button -->
-                <button><a href="/pokemon/<%=i; %>/edit">Edit</a></button>
+                    <!-- edit button -->
+                    <button class="buttonSize"><a href="/pokemon/<%=i; %>/edit">Edit</a></button>
+                </div>
              </div>
         </div>
         <%  } %>
